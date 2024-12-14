@@ -1,6 +1,9 @@
+const { createDefaultPreset } = require('ts-jest');
+
+/** @type {import('ts-jest').JestConfigWithTsJest} */
 module.exports = {
   collectCoverage: true,
-  preset: 'ts-jest',
-  restoreMocks: true,
-  testEnvironment: 'node',
+  ...createDefaultPreset({
+    tsconfig: 'tsconfig.cjs.json',
+  }),
 };
