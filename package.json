@@ -1,14 +1,16 @@
 {
   "name": "sudoku-gen",
-  "version": "1.0.3",
+  "version": "1.0.2",
   "description": "Sudoku puzzle generator",
   "type": "module",
   "main": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
   "exports": {
     "import": "./dist/esm/index.js",
-    "require": "./dist/cjs/index.js"
+    "require": "./dist/cjs/index.js",
+    "default": "./dist/esm/index.js",
+    "types": "./dist/types/index.d.ts"
   },
-  "types": "dist/types/index.d.ts",
   "scripts": {
     "build": "rimraf dist && tsc --project tsconfig.cjs.json && tsc --project tsconfig.esm.json",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
