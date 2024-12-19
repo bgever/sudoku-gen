@@ -2,6 +2,8 @@
   "name": "sudoku-gen",
   "version": "1.0.2",
   "description": "Sudoku puzzle generator",
+  "type": "module",
+  "main": "dist/esm/index.js",
   "exports": {
     "import": "./dist/esm/index.js",
     "require": "./dist/cjs/index.js"
